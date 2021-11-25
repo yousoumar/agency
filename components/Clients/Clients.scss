@@ -1,0 +1,33 @@
+.clients {
+  .container {
+    max-width: 1400px;
+    padding: 4rem 1rem;
+    margin: auto;
+    display: grid;
+    gap: 4rem;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+
+    .card {
+      border: 2px solid var(--black);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+  }
+
+  @media all and (min-width: 900px) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+}

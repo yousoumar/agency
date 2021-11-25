@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+@import "./variables";
+@import "../components/Loader/Loader";
+@import "../components/Header/Header";
+@import "../components/Hero/Hero";
+@import "../components/Services/Services";
+@import "../components/Clients/Clients";
+@import "../components/Team/Team";
+@import "../components/Projects/Projects";
+@import "../components/Agency/Agency";
+@import "../components/Footer/Footer";
+
+*,
+::after,
+a::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--light-black);
+  color: var(--white);
+  font-family: Poppins, sans-serif;
+  line-height: 1.3;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.call-to-action {
+  border: 2px solid #2debdb;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.button {
+  z-index: 99;
+  border: 2px solid #2debdb;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: block;
+  width: max-content;
+  margin: 2rem auto;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  p.primary {
+    text-transform: uppercase;
+  }
+}
+
+.brand {
+  margin-left: -0.8rem;
+  width: 5rem;
+  height: 5rem;
+}

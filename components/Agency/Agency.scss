@@ -1,0 +1,35 @@
+.agency {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+
+  .imgs {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  @media all and (min-width: 800px) {
+    & {
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 4rem;
+
+      .imgs {
+        display: grid;
+        grid-template-columns: 200px 200px;
+
+        .img:nth-child(3) {
+          grid-column: 1/-1;
+          max-width: 200px;
+          transform: translateX(60%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.team {
+  padding: 4rem 1rem;
+  background-color: var(--black);
+
+  .cards {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .card {
+    background-color: var(--light-black);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-height: 170px;
+    min-width: 300px;
+    max-width: 330px;
+
+    &:nth-child(even) {
+      margin-left: auto;
+    }
+
+    .row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .post {
+      font-size: 0.8rem;
+    }
+
+    .img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex: none;
+    }
+
+    .link {
+      width: max-content;
+      margin: 2rem auto;
+    }
+  }
+
+  @media all and (min-width: 900px) {
+    & {
+      .cards {
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+
+        .card:nth-child(odd),
+        .card:nth-child(even) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

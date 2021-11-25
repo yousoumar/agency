@@ -1,0 +1,101 @@
+.services {
+  text-align: center;
+  background-color: var(--black);
+  padding: 4rem 1rem;
+  clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
+
+  .cards {
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  .row {
+    display: grid;
+    gap: 3rem;
+    position: relative;
+
+    .card {
+      background-color: var(--white);
+      border-radius: 1rem;
+      color: var(--black);
+      position: relative;
+      max-width: 250px;
+      padding: 2rem 1rem 1rem;
+      text-align: left;
+      z-index: 2;
+
+      &:nth-child(even) {
+        margin-left: auto;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .img {
+        width: 61px;
+        position: absolute;
+        top: -2rem;
+        right: 1rem;
+      }
+    }
+
+    &.second-row {
+      margin: 3rem auto;
+
+      .card:nth-child(even) {
+        margin-left: 0;
+      }
+
+      .card:nth-child(odd) {
+        margin-left: auto;
+      }
+    }
+
+    &.third-row {
+      .card:nth-child(odd) {
+        margin-left: auto;
+      }
+
+      .card:nth-child(even) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media all and (min-width: 900px) {
+    & {
+      .row {
+        justify-content: center;
+        gap: 3rem;
+        grid-template-columns: auto auto auto;
+        width: max-content;
+        margin: 0 auto;
+
+        &.with-two-card {
+          grid-template-columns: auto auto;
+        }
+
+        &.second-row {
+          margin: 7rem auto;
+        }
+
+        .card {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: 1000px) {
+    & {
+      .row {
+        justify-content: center;
+        gap: 5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.projects {
+  background-color: var(--black);
+  padding: 4rem 0;
+
+  .cards {
+    max-width: auto;
+    margin: 0 auto;
+
+    .row {
+      display: grid;
+      margin: 2rem 0;
+      gap: 2rem;
+    }
+  }
+
+  @media all and (min-width: 900px) {
+    .cards {
+      .row {
+        grid-template-columns: 0.9fr 1fr 1.1fr;
+
+        &:nth-child(2) {
+          grid-template-columns: 1fr 1.1fr 0.9fr;
+        }
+
+        &:nth-child(3) {
+          grid-template-columns: 1.1fr 0.9fr 1fr;
+        }
+      }
+    }
+  }
+}
