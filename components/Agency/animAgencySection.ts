@@ -14,21 +14,16 @@ export const animAgencySection = (ref: RefObject<HTMLElement>) => {
         },
         scrollTrigger: {
           trigger: parent,
-          start: "top 70%",
-          end: "bottom 70%",
-          toggleActions: "play none none reverse",
+          start: "top 80%",
+          end: "bottom 100%",
+          scrub: true,
         },
       });
-      tl.from(parent, {
-        autoAlpha: 0.3,
-      }).from(
-        parent.querySelectorAll("img"),
-        {
-          autoAlpha: 0.3,
-          stagger: 0.1,
-        },
-        "-=0.5"
-      );
+      tl.from(parent.querySelectorAll(".img"), {
+        autoAlpha: 0,
+        y: 40,
+        stagger: 0.2,
+      });
     },
   });
 };

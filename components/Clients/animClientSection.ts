@@ -20,10 +20,6 @@ export const animClientSection = (ref: RefObject<HTMLElement>) => {
         },
       });
 
-      tl.from(parent, {
-        autoAlpha: 0.1,
-      });
-
       clients.forEach((c) => {
         tl.from(c, {
           autoAlpha: 0.1,

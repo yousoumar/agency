@@ -11,8 +11,8 @@ export default function animProjectsSection(ref: RefObject<HTMLElement>) {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: parent,
-          start: "top 70%",
-          end: "bottom 70%",
+          start: "top 80%",
+          end: "bottom 80%",
           scrub: true,
         },
       });
@@ -20,7 +20,7 @@ export default function animProjectsSection(ref: RefObject<HTMLElement>) {
         opacity: 0.1,
       }).from(parent.querySelectorAll(".card"), {
         opacity: 0.1,
-        stagger: 0.2,
+        stagger: 0.1,
       });
     },
   });
