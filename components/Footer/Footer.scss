@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--black);
+  background-color: var(--background);
 
   .content {
     max-width: 1200px;
@@ -37,7 +37,7 @@
   }
 
   .copyright {
-    background-color: var(--light-black);
+    background-color: var(--secondary);
     padding: 1rem;
     font-size: 0.9rem;
   }

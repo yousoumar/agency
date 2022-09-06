@@ -1,6 +1,6 @@
 .team {
   padding: 4rem 1rem;
-  background-color: var(--black);
+  background-color: var(--background);
 
   .cards {
     margin-top: 2rem;
@@ -9,7 +9,7 @@
   }
 
   .card {
-    background-color: var(--light-black);
+    background-color: var(--secondary);
     padding: 2rem;
     border-radius: 1rem;
     max-height: 170px;

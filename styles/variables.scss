@@ -1,6 +1,12 @@
 :root {
   --primary: #2debdb;
-  --black: black;
-  --light-black: rgb(20 20 20);
-  --white: white;
+  --background: black;
+  --secondary: rgb(20 20 20);
+  --forground: white;
+}
+
+[data-theme="light"] {
+  --background: white;
+  --forground: black;
+  --secondary: rgb(235 235 235);
 }

@@ -1,6 +1,6 @@
 .services {
   text-align: center;
-  background-color: var(--black);
+  background-color: var(--background);
   padding: 4rem 1rem;
   clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
 
@@ -15,9 +15,9 @@
     position: relative;
 
     .card {
-      background-color: var(--white);
+      background-color: var(--forground);
       border-radius: 1rem;
-      color: var(--black);
+      color: var(--background);
       position: relative;
       max-width: 250px;
       padding: 2rem 1rem 1rem;
