@@ -7,6 +7,11 @@ export default function Clients() {
   const ref = useRef(null);
 
   useEffect(() => {
+    if (document.readyState) {
+      animClientSection(ref);
+      return;
+    }
+
     window.addEventListener("load", () => animClientSection(ref));
     return () => window.removeEventListener("load", () => animClientSection(ref));
   }, [ref]);

@@ -4,6 +4,10 @@ import { animHeroSectionOnLoad } from "./animHeroSection";
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
+    if (document.readyState) {
+      animHeroSectionOnLoad(ref);
+      return;
+    }
     window.addEventListener("load", () => animHeroSectionOnLoad(ref));
     return () => window.removeEventListener("load", () => animHeroSectionOnLoad(ref));
   }, [ref]);

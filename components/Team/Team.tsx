@@ -7,6 +7,11 @@ export default function Team() {
   const ref = useRef(null);
 
   useEffect(() => {
+    if (document.readyState) {
+      animTeamSection(ref);
+      return;
+    }
+
     window.addEventListener("load", () => animTeamSection(ref));
     return () => window.removeEventListener("load", () => animTeamSection(ref));
   }, [ref]);

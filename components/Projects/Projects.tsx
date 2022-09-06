@@ -6,6 +6,11 @@ export default function Projects() {
   const ref = useRef(null);
 
   useEffect(() => {
+    if (document.readyState) {
+      animProjectsSectionfrom(ref);
+      return;
+    }
+
     window.addEventListener("load", () => animProjectsSectionfrom(ref));
     return () => window.removeEventListener("load", () => animProjectsSectionfrom(ref));
   }, [ref]);

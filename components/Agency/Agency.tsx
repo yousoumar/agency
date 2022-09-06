@@ -6,6 +6,10 @@ export default function Agency() {
   const ref = useRef(null);
 
   useEffect(() => {
+    if (document.readyState) {
+      animAgencySection(ref);
+      return;
+    }
     window.addEventListener("load", () => animAgencySection(ref));
     return () => window.removeEventListener("load", () => animAgencySection(ref));
   }, [ref]);

@@ -6,6 +6,11 @@ export default function Services() {
   const servicesRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    if (document.readyState) {
+      animServicesSection(servicesRef);
+      return;
+    }
+
     window.addEventListener("load", () => animServicesSection(servicesRef));
     return () => window.removeEventListener("load", () => animServicesSection(servicesRef));
   }, [servicesRef]);
