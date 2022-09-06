@@ -11,7 +11,7 @@ export default function animProjectsSection(ref: RefObject<HTMLElement>) {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: parent,
-          start: "top 80%",
+          start: "top 90%",
           end: "bottom 80%",
           scrub: true,
         },
