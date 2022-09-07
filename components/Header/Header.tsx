@@ -1,40 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [showNav, setShowNav] = useState(false);
-  const headerRef = useRef<HTMLElement>(null);
-  let savedTheme: string;
-  try {
-    const savedItem = localStorage.getItem("theme") || "";
-    savedTheme = ["dark", "light"].includes(savedItem) ? savedItem : "dark";
-  } catch (error) {
-    savedTheme = "dark";
-  }
-  const [theme, setTheme] = useState<string>(savedTheme);
+  const [theme, setTheme] = useState<"light" | "">("");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "";
+    setTheme(savedTheme === "light" ? savedTheme : "");
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
     document.documentElement.setAttribute("data-theme", theme || "");
   }, [theme]);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 50) {
-        headerRef.current!.classList.add("scrolled");
-      } else {
-        headerRef.current!.classList.remove("scrolled");
-      }
-    });
-    showNav
-      ? headerRef.current!.classList.add("clicked")
-      : headerRef.current!.classList.remove("clicked");
-  }, [showNav]);
-  const toggleNav = () => {
-    setShowNav(!showNav);
-  };
   return (
-    <header className="header" ref={headerRef}>
+    <header className="header">
       <div className="container">
         <a href="" className="brand">
           <img src="/logo.svg" alt="" />
@@ -50,9 +32,9 @@ export default function Header() {
         <div className="buttons">
           <button
             className="theme-toggler"
-            onClick={() => setTheme(theme == "dark" ? "light" : "dark")}
+            onClick={() => setTheme(theme == "light" ? "" : "light")}
           >
-            {theme === "dark" ? (
+            {theme !== "light" ? (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
                   fill="currentColor"
@@ -68,7 +50,7 @@ export default function Header() {
               </svg>
             )}
           </button>
-          <button className="hamburger" onClick={toggleNav}>
+          <button className="hamburger" onClick={() => setShowNav(!showNav)}>
             <span className="bar bar1"></span>
             <span className="bar bar2"></span>
             <span className="bar bar3"></span>

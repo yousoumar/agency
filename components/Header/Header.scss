@@ -9,10 +9,6 @@
   background-color: var(--background);
   box-shadow: 0 0 5px var(--secondary);
 
-  &.scrolled {
-    box-shadow: 0 0 5px var(--secondary);
-  }
-
   .container {
     display: flex;
     justify-content: space-between;
