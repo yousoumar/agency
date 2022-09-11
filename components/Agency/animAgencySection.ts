@@ -15,7 +15,7 @@ export const animAgencySection = (ref: RefObject<HTMLElement>) => {
         scrollTrigger: {
           trigger: parent,
           start: "top 70%",
-          end: "bottom 100%",
+          end: "bottom 70%",
           scrub: true,
         },
       });

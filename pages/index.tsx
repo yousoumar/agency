@@ -24,8 +24,8 @@ export default function Home() {
       <Services />
       <Clients />
       <Team />
-      <Projects />
       <Agency />
+      <Projects />
       <Footer />
     </>
   );

@@ -11,7 +11,7 @@ export default function Footer() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo urna, iaculis.
           </p>
         </div>
-        <div className="column second primary">
+        <div className="column second">
           <a target="_blank" href="https://www.google.com/maps/" rel="noreferrer">
             10 avenue de Mauris, 75019 Paris, France
           </a>
@@ -36,7 +36,12 @@ export default function Footer() {
           <a href="">L’agence</a>
         </div>
       </div>
-      <div className="copyright">© Agency 2021 - Conçu & réalisé par Agency</div>
+      <div className="copyright">
+        © Agency 2021 - Conçu & réalisé par{" "}
+        <a href="https://github.com/yousoumar/" target="_blank" rel="noreferrer">
+          Youssouf Oumar
+        </a>
+      </div>
     </footer>
   );
 }
